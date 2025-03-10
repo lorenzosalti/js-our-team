@@ -21,7 +21,7 @@ h1 {
 
 /*** MAIN ***/
 main {
-  width: 1300px;
+  width: 1400px;
   margin: 0 auto;
 }
 
@@ -39,6 +39,34 @@ main p {
   margin: 20px;
   width: calc(100% / 3 - 40px);
   flex-shrink: 0;
+  display: flex;
 
   background-color: aqua;
+}
+
+.card img {
+  width: 125px;
+}
+
+.text {
+  color: #ffffff;
+  background-color: #000000;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.name {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.role {
+  margin-bottom: 13px;
+  font-size: 20px;
+}
+
+.mail-address {
+  font-size: 20px;
+  text-decoration: none;
+  color: #5ccbf2;
 }
