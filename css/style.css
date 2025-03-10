@@ -29,13 +29,13 @@ main p {
   margin-bottom: 70px;
 }
 
-.grid {
+.team-grid {
   display: flex;
   flex-wrap: wrap;
   margin: -20px;
 }
 
-.card {
+.team-member {
   margin: 20px;
   width: calc(100% / 3 - 40px);
   flex-shrink: 0;
@@ -44,11 +44,11 @@ main p {
   background-color: aqua;
 }
 
-.card img {
+.team-member img {
   width: 125px;
 }
 
-.text {
+.infos {
   color: #ffffff;
   background-color: #000000;
   flex-grow: 1;

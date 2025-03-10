@@ -37,5 +37,44 @@ const teamMembers = [
   }
 ];
 
+// definizione elementi
+const gridElement = document.querySelector('.team-grid');
 
-console.log(teamMembers);
+renderObjHTML(gridElement, teamMembers);
+
+
+
+function renderObjHTML(container, elements) {
+
+  console.log(container);
+
+  for (let i = 0; i < elements.length; i++) {
+
+    const currentElement = elements[i];
+
+    console.log(currentElement);
+
+    container.innerHTML += `<div class="team-member">
+        <img src="./${currentElement.img}" alt="${currentElement.name}">
+        <div class="infos">
+          <div class="name"><strong>${currentElement.name}</strong></div>
+          <div class="role">${currentElement.role}</div>
+          <a href="mailto: ${currentElement.email}" class="mail-address">${currentElement.email}</a>
+        </div>
+      </div>`
+  }
+
+}
+
+
+// elemento HTML di riferimento
+/* <div class="team-member">
+        <img src="./img/female1.png" alt="Female">
+        <div class="infos">
+          <div class="name"><strong>Nome Cognome</strong></div>
+          <div class="role">Ruolo</div>
+          <a href="mailto: indirizzo@mail.com" class="mail-address">indirizzo@mail.com</a>
+        </div>
+      </div> */
+
+// console.log(teamMembers);
