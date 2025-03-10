@@ -48,17 +48,18 @@ renderObjHTML(gridElement, teamMembers);
 // rendering di un array di oggetti
 function renderObjHTML(container, elements) {
 
-  let objectsHTML = '';
+  let elementsHTML = '';
 
+  // iterazione sugli elementi dell'array
   for (let i = 0; i < elements.length; i++) {
 
     const currentElement = elements[i];
 
-    objectsHTML += createCardHTML(currentElement);
+    elementsHTML += createCardHTML(currentElement);
 
   }
 
-  container.innerHTML = objectsHTML;
+  container.innerHTML = elementsHTML;
 
 }
 

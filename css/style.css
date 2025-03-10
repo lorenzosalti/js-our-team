@@ -29,19 +29,19 @@ main p {
   margin-bottom: 70px;
 }
 
+/* grid container */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
   margin: -20px;
 }
 
+/* grid card */
 .team-member {
   margin: 20px;
   width: calc(100% / 3 - 40px);
   flex-shrink: 0;
   display: flex;
-
-  background-color: aqua;
 }
 
 .team-member img {
