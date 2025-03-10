@@ -40,30 +40,38 @@ const teamMembers = [
 // definizione elementi
 const gridElement = document.querySelector('.team-grid');
 
+// invocazione della funzione generante
 renderObjHTML(gridElement, teamMembers);
 
 
-
+// FUNZIONI
+// rendering di un array di oggetti
 function renderObjHTML(container, elements) {
 
-  console.log(container);
+  let objectsHTML = '';
 
   for (let i = 0; i < elements.length; i++) {
 
     const currentElement = elements[i];
 
-    console.log(currentElement);
+    objectsHTML += createCardHTML(currentElement);
 
-    container.innerHTML += `<div class="team-member">
-        <img src="./${currentElement.img}" alt="${currentElement.name}">
-        <div class="infos">
-          <div class="name"><strong>${currentElement.name}</strong></div>
-          <div class="role">${currentElement.role}</div>
-          <a href="mailto: ${currentElement.email}" class="mail-address">${currentElement.email}</a>
-        </div>
-      </div>`
   }
 
+  container.innerHTML = objectsHTML;
+
+}
+
+// html di un singolo oggetto
+function createCardHTML(obj) {
+  return `<div class="team-member">
+        <img src="./${obj.img}" alt="${obj.name}">
+        <div class="infos">
+          <div class="name"><strong>${obj.name}</strong></div>
+          <div class="role">${obj.role}</div>
+          <a href="mailto: ${obj.email}" class="mail-address">${obj.email}</a>
+        </div>
+      </div>`
 }
 
 
@@ -76,5 +84,3 @@ function renderObjHTML(container, elements) {
           <a href="mailto: indirizzo@mail.com" class="mail-address">indirizzo@mail.com</a>
         </div>
       </div> */
-
-// console.log(teamMembers);
