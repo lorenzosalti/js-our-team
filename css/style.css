@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/*** GLOBAL ***/
+body {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+}
+
 /*** HEADER ***/
 h1 {
   text-align: center;
